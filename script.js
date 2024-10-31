@@ -1,41 +1,41 @@
 let temperature = 0;
-let state = "water"; // Estados: "water", "ice", "vapor"
+let state = "water";
 
-// Atualiza o elemento na tela
+
 function updateState() {
     const waterElement = document.getElementById("water");
     const temperatureDisplay = document.getElementById("temperatureDisplay");
 
     if (temperature >= 100) {
         state = "vapor";
-        waterElement.innerText = "💨"; // Vapor
+        waterElement.innerText = "💨"; 
         temperatureDisplay.innerText = "A água evaporou! Temperatura: " + temperature + "°C";
     } else if (temperature <= 0) {
         state = "ice";
-        waterElement.innerText = "❄️"; // Gelo
+        waterElement.innerText = "❄️"; 
         temperatureDisplay.innerText = "A água congelou! Temperatura: " + temperature + "°C";
     } else {
         state = "water";
-        waterElement.innerText = "💧"; // Água
+        waterElement.innerText = "💧"; 
         temperatureDisplay.innerText = "Temperatura: " + temperature + "°C";
     }
 }
 
-// Função para aumentar a temperatura
+
 function increaseTemperature() {
-    if (state === "vapor") return; // Não aumenta mais se for vapor
+    if (state === "vapor") return; 
     temperature += 10;
     updateState();
 }
 
-// Função para diminuir a temperatura
+
 function decreaseTemperature() {
-    if (state === "ice") return; // Não diminui mais se for gelo
+    if (state === "ice") return; 
     temperature -= 10;
     updateState();
 }
 
-// Função para reiniciar o jogo
+
 function restartGame() {
     temperature = 0;
     state = "water";
