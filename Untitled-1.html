@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Termômetro - Mudança de Estado da Água</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container header">
+        <div class="header-container">
+            <div>
+                <h1>Controle a Temperatura</h1>
+                <h5 class="subtitle">Ajuste a temperatura para ver a água mudar de estado! Pode aumentar ou resfriar.</h5>
+            </div>
+        </div>
+
+        <div id="water" class="element">💧</div>
+        
+        <div class="controls">
+            <button onclick="decreaseTemperature()">🔽 Resfriar</button>
+            <div id="temperatureDisplay" class="primary-color">Temperatura: 0°C</div>
+            <button onclick="increaseTemperature()">🔼 Aquecer</button>
+        </div>
+
+        <button onclick="restartGame()">Reiniciar</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
